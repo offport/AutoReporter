@@ -1,4 +1,4 @@
-# Unit42 Reporter
+# Auto Reporter
 ## Markdown to Final PDF Report Really Quick!!
 ### Automatic report generation flexible enough to add custom sections
 
@@ -34,7 +34,6 @@
 	apt-get install python3
 	apt-get install python3-pip
 	pip install matplotlib
-	pip3 install seaborn
 	```	
 - install pdftk
 
@@ -44,7 +43,7 @@
 
 - clone the repo
 
-	`git clone https://github.com/offport/Unit42Reporter.git`
+	`git clone https://github.com/offport/AutoReporter.git`
 	
 - Fill in your work in dir `doc`
 	
@@ -54,12 +53,6 @@
 	chmod +x parser.sh
 	./parser.sh
 	```
-
-## Add a cover page
-
-
-add a cover page
-`pdftk cover.pdf report.pdf cat output reportWithCover.pdf`
 
 ## Recommendations
 

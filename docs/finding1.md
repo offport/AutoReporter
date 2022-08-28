@@ -23,6 +23,7 @@ The vulnerability allows to bypass the login page to login as any user including
 **Test Details**
 
 Screenshots
+
 ![](screenshots/sql.png)
 
 

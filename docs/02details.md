@@ -19,7 +19,7 @@ Phases of penetration testing activities include the following:
 
 ## Level of Access
 
-For this assessment, Unit 42 was provided local administrator credentials to a Microsoft Windows workstation on [Client Short Name]’s network
+For this assessment, Offport was provided local administrator credentials to a Microsoft Windows workstation on [Client Short Name]’s network
 
 | Account	| Level of access |
 |----|----|
@@ -31,8 +31,8 @@ For this assessment, Unit 42 was provided local administrator credentials to a M
 
 **Scope validation**
 
-External testing was conducted remotely from Unit 42 facilities and by consultants using VPNs. [Client Short Name] provided Unit 42 with a range of IP addresses to be used as potential targets for testing. Unit 42 validated these ranges using whois data provided by the American Registry for Internet Numbers (“ARIN”).
-Reviewing this information, Unit 42 determined that several of the IP addresses were leased from different organizations, as seen below. Clent, however, confirmed that all of these IP addresses are in scope for the assessment.
+External testing was conducted remotely from Offport facilities and by consultants using VPNs. [Client Short Name] provided Offport with a range of IP addresses to be used as potential targets for testing. Offport validated these ranges using whois data provided by the American Registry for Internet Numbers (“ARIN”).
+Reviewing this information, Offport determined that several of the IP addresses were leased from different organizations, as seen below. Clent, however, confirmed that all of these IP addresses are in scope for the assessment.
 
 ```bash
 for x in $(cat ept-cidrs.txt); do echo "[+]" $x; whois $x | tee -a whois-full.txt | grep -Ei 'Organization|OrgName|netname|descr|address|bal';done | tee whois.txt
@@ -40,7 +40,7 @@ for x in $(cat ept-cidrs.txt); do echo "[+]" $x; whois $x | tee -a whois-full.tx
 
 **DNS enumeration**
 
-Unit 42 began testing by aggregating open-source intelligence (“OSINT”) on [Client Short Name]’s systems. OSINT data consists of information scraped from public resources that can be leveraged for enumerating and attacking in-scope systems. This type of intelligence gathering is often passively collected through nontarget resources, such as search engines. Unit 42 leveraged several automated tools to perform data collection. Using the sublist3r  tool, Unit 42 discovered several subdomain targets that fell within the provided scope.
+Offport began testing by aggregating open-source intelligence (“OSINT”) on [Client Short Name]’s systems. OSINT data consists of information scraped from public resources that can be leveraged for enumerating and attacking in-scope systems. This type of intelligence gathering is often passively collected through nontarget resources, such as search engines. Offport leveraged several automated tools to perform data collection. Using the sublist3r  tool, Offport discovered several subdomain targets that fell within the provided scope.
 
 ```
 sublist3r -d client.com -o sublisterOutput
@@ -54,13 +54,13 @@ for x in $(cat sublist3r.txt); do echo $x; host $x; done
 
 **User harvesting**
 
-Continuing OSINT collection, Unit 42 used BridgeKeeper  to scrape common search engines, LinkedIn, and other websites for employee names to generate potentially valid usernames. Using this technique, Unit 42 identified several unique email addresses that could be used in further testing.
+Continuing OSINT collection, Offport used BridgeKeeper  to scrape common search engines, LinkedIn, and other websites for employee names to generate potentially valid usernames. Using this technique, Offport identified several unique email addresses that could be used in further testing.
 
 `python3 bridgekeeper.py --company “client” --domain client.com --depth 10`
 
 **Network scanning**
 
-Unit 42 conducted reconnaissance throughout the assessment to help identify and enumerate external services and ensure that they were tested as part of the assessment. Unit 42 performed active scanning against in-scope assets with Nmap  covering all Transmission Control Protocol (“TCP”) and User Datagram Protocol (“UDP”) ports. Service enumeration and operating system detection was also conducted with the same tools during this phase. This information was used to drive exploitation attempts and help Unit 42 target potentially vulnerable assets.
+Offport conducted reconnaissance throughout the assessment to help identify and enumerate external services and ensure that they were tested as part of the assessment. Offport performed active scanning against in-scope assets with Nmap  covering all Transmission Control Protocol (“TCP”) and User Datagram Protocol (“UDP”) ports. Service enumeration and operating system detection was also conducted with the same tools during this phase. This information was used to drive exploitation attempts and help Offport target potentially vulnerable assets.
 
 `nmap -sSU -p 1-65535 -iL scope.txt -oA client`
 

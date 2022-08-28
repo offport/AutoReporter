@@ -2,7 +2,7 @@
 ## Executive Summary
 
 ### Background
-[Client Legal Name] (“Client” or “[Client Short Name]”) engaged Unit 42, a Palo Alto Networks, Inc. company, (“Consultant” or “Unit 42”) to perform an [insert type of test] on Client’s [internal/external/application’s] assets to identify potential security vulnerabilities. The assessment was conducted from [Assessment Start Date], to [Assessment End Date].
+[Client Legal Name] (“Client” or “[Client Short Name]”) engaged Offport,  to perform an [insert type of test] on Client’s [internal/external/application’s] assets to identify potential security vulnerabilities. The assessment was conducted from [Assessment Start Date], to [Assessment End Date].
 
 ### Team
 

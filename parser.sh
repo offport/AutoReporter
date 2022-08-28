@@ -28,7 +28,7 @@ pandoc fullreport.md -o  output.pdf \
 --table-of-contents \
 --toc-depth 3 \
 --number-sections \
---top-level-division=chapter --listing -H style.tex --lua-filter colors.lua
+--top-level-division=chapter --listing -H style.tex --lua-filter colors.lua \
 --resource-path=.:docs
 
 pdftk docs/cover.pdf output.pdf cat output Report.pdf

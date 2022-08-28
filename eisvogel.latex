@@ -673,9 +673,8 @@ $if(listings-disable-line-numbers)$
   xleftmargin      = 0.6em,
   framexleftmargin = 0.4em,
 $else$
-  numbers          = left,
-  xleftmargin      = 2.7em,
-  framexleftmargin = 2.5em,
+  xleftmargin      = 0.6em,
+  framexleftmargin = 0.4em,
 $endif$
   backgroundcolor  = \color{listing-background},
   basicstyle       = \color{listing-text-color}\linespread{1.0}\small\ttfamily{},

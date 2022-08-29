@@ -32,7 +32,7 @@ For this assessment, Offport was provided local administrator credentials to a M
 **Scope validation**
 
 External testing was conducted remotely from Offport facilities and by consultants using VPNs. [Client Short Name] provided Offport with a range of IP addresses to be used as potential targets for testing. Offport validated these ranges using whois data provided by the American Registry for Internet Numbers (“ARIN”).
-Reviewing this information, Offport determined that several of the IP addresses were leased from different organizations, as seen below. Clent, however, confirmed that all of these IP addresses are in scope for the assessment.
+Reviewing this information, Offport determined that several of the IP addresses were leased from different organizations, as seen below. Client, however, confirmed that all of these IP addresses are in scope for the assessment.
 
 ```bash
 for x in $(cat ept-cidrs.txt); do echo "[+]" $x; whois $x | tee -a whois-full.txt | grep -Ei 'Organization|OrgName|netname|descr|address|bal';done | tee whois.txt

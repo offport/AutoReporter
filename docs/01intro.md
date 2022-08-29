@@ -20,8 +20,6 @@
 - 10.1.8.0/24
 - 10.1.10.0/23
 
-- 10.1.12.0/24
-- 10.1.14.0/24
 
 
 #### Scope Exclusions
@@ -29,13 +27,13 @@ Following reconnaissance of [Client Short Name]’s environment, the following d
 
 - 64.21.XXX.XXX
 - 198.233.XXX.XXX	
-- 64.21.XXX.XXX
-- 20.40.XXX.X
+
 
 
 ### Limitations
 - Time allowed for engagement [#Days]
 - Disallowed attacks
+  - DOS
 
 
 ### Summary of findings
@@ -48,7 +46,7 @@ The below table shows the total number of findings categorized by overall risk t
 
 The following recommendations provide direction on improving the overall security posture of networks and business-critical applications:
 
-- Patch this
-- Upgrade that
-- Disable this
+- Patch CVE-XXX on server 10.XX.XX.XXX
+- Upgrade software XXXX on host `hostname`
+- Disable feature XXX on Domain Controller
 

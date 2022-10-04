@@ -16,6 +16,10 @@ Phases of penetration testing activities include the following:
 
 ![](screenshots/methodology.png)
 
+OR *More General*
+Methodology was based on formal industry standards and best practices, which leveraged industry-standard and custom toolsets to meet the
+assessment objectives. All testing occurred in <name of physical location) and part remotely in <location> with coordication with <Client point of contact>.
+
 
 ## Level of Access
 

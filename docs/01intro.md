@@ -36,6 +36,14 @@ Following reconnaissance of [Client Short Name]’s environment, the following d
   - DOS
 
 
+### Assumptions and Constraints
+
+- The engagement was point-in-time type at the environment. Therefore, vulnerabilities mentioned in the report will not cover any future vulnerabilities.
+
+- The engagement doesn’t verify/discover all vulnerabilities in the network for time
+and business purposes. 
+
+
 ### Summary of findings
 
 The below table shows the total number of findings categorized by overall risk to the organization.
